@@ -608,7 +608,7 @@ export default Ember.Component.extend(ParentMixin, {
         }
 
         initMeasureLabel(item, map);
-        results.pushObject(item);
+        results.insertAt(0, item);
 
         if (this.get('afterAddFeature')) {
           this.sendAction('afterAddFeature', item);
