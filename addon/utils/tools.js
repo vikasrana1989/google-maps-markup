@@ -21,6 +21,7 @@ export default {
     name: 'Marker',
     title: 'Marker Tool',
     options: [
+      { name: 'Marker', type: 'Marker', id: 'marker', display: 'marker.display' },
       { name: 'Icon', type: 'icon', id: 'icon', display: 'icon.display' },
       { name: 'Color', type: 'color', id: 'style.color' },
     ],
@@ -29,46 +30,51 @@ export default {
     },
     icons: [{
       id: 'default',
-      display: 'Default',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Default'
     }, {
       id: 'grade',
-      display: 'Grade',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Grade'
     }, {
       id: 'help',
-      display: 'Help',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Help'
     }, {
       id: 'favorite',
-      display: 'Favorite',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Favorite'
     }, {
       id: 'check_circle',
-      display: 'Check Circle',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Check Circle'
     }, {
       id: 'lens',
-      display: 'Lens',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Lens'
     }, {
       id: 'filter_vintage',
-      display: 'Filter Vintage',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Filter Vintage'
     }, {
       id: 'photo_camera',
-      display: 'Photo Camera',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Photo Camera'
     }, {
       id: 'place',
-      display: 'Place',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+      display: 'Place'
     }],
     icon: {
       id: 'default',
-      display: 'Default',
-      path: 'M22-48h-44v43h16l6 5 6-5h16z',
+      display: 'Default'
     },
+
+    markers: [{
+      id: 'default',
+      display: 'SquarePin',
+      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+    }, {
+      id: 'grade',
+      display: 'Pin',
+      path: 'M1.1,0A1.7,1.7,0,0,1,.7-.7C.3-1.9-.3-3-.8-4.2L-1.9-6.8l-1.3-3-1.1-2.6-1.9-4.3-1.1-2.5-1.3-3.1c-.4-.9-.7-1.7-1.1-2.6s-.5-1.2-.8-1.9a5.2,5.2,0,0,1-.3-1.7,9.2,9.2,0,0,1,.3-3.5,10.1,10.1,0,0,1,2-3.7,12.2,12.2,0,0,1,2.2-2,12.8,12.8,0,0,1,5-2.1,13.3,13.3,0,0,1,6.8.4,12.2,12.2,0,0,1,3.4,1.7,12.6,12.6,0,0,1,2.7,2.7,6.4,6.4,0,0,1,.6,1.1,8.3,8.3,0,0,1,.6,6.2A26.3,26.3,0,0,1,11.2-24l-.6,1.4c-.4.8-.7,1.7-1,2.5l-1.2,3L7.2-14.4,5.9-11.2,4.7-8.5,3.5-5.6,2.3-2.8Z'
+    }],
+    marker: {
+      id: 'default',
+      display: 'SquarePin',
+      path: 'M22-48h-44v43h16l6 5 6-5h16z'
+    }
   },
   polyline: {
     id: 'polyline',

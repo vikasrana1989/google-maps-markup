@@ -738,9 +738,13 @@ export default Ember.Component.extend(ParentMixin, {
               return iconObj.id === tool.icon.id;
             });
 
+             let markerObj = tool.markers.find(function(markerObj){
+              return markerObj.id === tool.marker.id;
+            });
+
             let style = {
               icon: {
-                path: iconObj.path,
+                path: markerObj.path,
                 fillColor: tool.style.color,
                 fillOpacity: 1,
                 strokeColor: '',
@@ -752,7 +756,7 @@ export default Ember.Component.extend(ParentMixin, {
 
             let hoverStyle = {
               icon: {
-                path: iconObj.path,
+                path: markerObj.path,
                 fillColor: hoverColor(tool.style.color),
                 fillOpacity: 1,
                 strokeColor: '',
@@ -766,7 +770,7 @@ export default Ember.Component.extend(ParentMixin, {
                 position: calculateLatLng(map, event),
                 map: map,
                 icon: {
-                  path: iconObj.path,
+                  path: markerObj.path,
                   fillColor: tool.style.color,
                   fillOpacity: 1,
                   strokeColor: '',
