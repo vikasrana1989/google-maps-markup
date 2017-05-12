@@ -55,26 +55,28 @@
             onchange=(action "updateOptionValue" activeTool opt.id)
             as |marker|
           }}
-          <span>{{marker.display}}</span>
-          <i class="material-icons">{{ icon.id }}</i>
+            <span>{{marker.display}}</span>
           {{/power-select}}
           </div>
         {{/if}}
-      {{#if (is-equal opt.type 'icon')}}
-        <div class="form-group drop_down">
-          <div><label>{{opt.name}}</label></div>
-          {{#power-select
-            options=activeTool.icons
-            selected=activeTool.icon
-            searchEnabled=false
-            onchange=(action "updateOptionValue" activeTool opt.id)
-            as |icon|
-          }}
-          <span>{{icon.display}}</span>
-          <i class="material-icons">{{ icon.id }}</i>
-          {{/power-select}}
-          </div>
+      {{#unless (is-equal activeTool.marker.id 'default')}}
+        {{#if (is-equal opt.type 'icon')}}
+          <div class="form-group drop_down">
+            <div><label>{{opt.name}}</label></div>
+            {{#power-select
+              options=activeTool.icons
+              selected=activeTool.icon
+              searchEnabled=false
+              onchange=(action "updateOptionValue" activeTool opt.id)
+              as |icon|
+            }}
+            <span>{{icon.display}}</span>
+            <i class="material-icons">{{ icon.id }}</i>
+            {{/power-select}}
+            </div>
         {{/if}}
+      {{/unless}}
+
       {{/each}}
     </form>
   {{/if}}
