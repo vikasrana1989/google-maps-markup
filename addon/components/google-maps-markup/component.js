@@ -753,7 +753,7 @@ export default Ember.Component.extend(ParentMixin, {
                   strokeWeight: 0,
                   scaledSize: new google.maps.Size(22, 40)
                 },
-                 map_icon_label: '<i class="material-icons">' + markerObj.id + '</i>'
+                map_icon_label: '<i class="material-icons">' + markerObj.id + '</i>'
               };
 
               let hoverStyle = {
