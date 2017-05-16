@@ -86,7 +86,7 @@
 
 .ember-power-select-option i.material-icons,
 .ember-power-select-selected-item i.material-icons {
-  color: #444;
+  color: #444444;
   font-size: 15px;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .ember-power-select-selected-item svg path,.ember-power-select-option svg path {
-    fill: #444;
+    fill: #444444;
 }
 
 .ember-power-select-selected-item:hover svg path,.ember-power-select-option:hover svg path {
